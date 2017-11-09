@@ -25,20 +25,6 @@ namespace FileManagement_CoopRel
             
         }
 
-        //private void buatDalamNegeri_Click(object sender, EventArgs e)
-        //{
-        //    document_creation = new DocumentCreation(this, DocumentCreation.DOKUMEN_DALAM_NEGERI);
-        //    document_creation.Text = "Buat Dokumen Hubungan Dalam Negeri Baru";
-        //    document_creation.Show();
-        //}
-
-        //private void buatLuarNegeri_Click(object sender, EventArgs e)
-        //{
-        //    document_creation = new DocumentCreation(this, DocumentCreation.DOKUMEN_LUAR_NEGERI);
-        //    document_creation.Text = "Buat Dokumen Hubungan Luar Negeri Baru";
-        //    document_creation.Show();
-        //}
-
         private void createYearTiles(string directory, string type)
         {
             MetroTile x;

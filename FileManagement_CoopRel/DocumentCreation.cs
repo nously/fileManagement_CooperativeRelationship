@@ -1,30 +1,21 @@
-﻿using System;
-using MetroFramework.Controls;
-using MetroFramework.Forms;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MetroFramework.Forms;
+using System;
 using System.Windows.Forms;
 
 namespace FileManagement_CoopRel
 {
     public partial class DocumentCreation : MetroForm
     {
-        public const int DOKUMEN_LUAR_NEGERI = 1;
-        public const int DOKUMEN_DALAM_NEGERI = 0;
-
         DocumentList parent;
-        int relationType;
+        string path;
+        string type;
 
-        public DocumentCreation(DocumentList parent, int relationType)
+        public DocumentCreation(DocumentList parent, string path, string type)
         {
             InitializeComponent();
             this.parent = parent;
-            this.relationType = relationType;
+            this.path = path;
+            this.type = type;
 
             // make directory
             string dalamNegeriDir = 
@@ -79,11 +70,11 @@ namespace FileManagement_CoopRel
             writer = configureDocument(writer);
 
 
-            if (relationType == DOKUMEN_DALAM_NEGERI)
+            if (type.Equals("Dalam Negeri"))
             {
                 writer.Content.Text = "Kerjasama dalam negeri";
             }
-            else if (relationType == DOKUMEN_LUAR_NEGERI)
+            else if (type.Equals("Luar Negeri"))
             {
                 writer.Content.Text = "Kerjasama luar negeri";
             }
@@ -120,27 +111,19 @@ namespace FileManagement_CoopRel
 
 
             // save document
-            if (relationType == DOKUMEN_DALAM_NEGERI)
-            {
-                Object savedir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Hubungan Kerja Sama\\Dalam Negeri\\test";
-                writer.SaveAs2(ref savedir);
-                writer.Close(ref missing, ref missing, ref missing);
-                wordApp.Quit(ref missing, ref missing, ref missing);
-            }
-            else if (relationType == DOKUMEN_LUAR_NEGERI)
-            {
-                Object savedir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Hubungan Kerja Sama\\Luar Negeri\\test";
-                writer.SaveAs2(ref savedir);
-                writer.Close(ref missing, ref missing, ref missing);
-                wordApp.Quit(ref missing, ref missing, ref missing);
-            }
+            
+            Object savedir = path + "\\"+  +"_tess_";
+            writer.SaveAs2(ref savedir);
+            writer.Close(ref missing, ref missing, ref missing);
+            wordApp.Quit(ref missing, ref missing, ref missing);
+
 
             MessageBox.Show("Document saved");
         }
 
         private void DocumentCreation_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(relationType + "");
+            
         }
     }
 }

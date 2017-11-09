@@ -52,8 +52,7 @@ namespace FileManagement_CoopRel
 
         private void metroButton3_Click(object sender, EventArgs e)
         {
-            int tp = (type.Equals("Dalam Negeri") ? DocumentCreation.DOKUMEN_DALAM_NEGERI : DocumentCreation.DOKUMEN_LUAR_NEGERI);
-            DocumentCreation creation = new DocumentCreation(this, tp);
+            DocumentCreation creation = new DocumentCreation(this, path, type);
             creation.Show();
         }
     }
