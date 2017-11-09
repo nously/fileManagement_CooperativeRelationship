@@ -28,11 +28,13 @@ namespace FileManagement_CoopRel
             this.type = type;
         }
 
-        private void DocumentList_Load(object sender, EventArgs e)
+        public void DocumentList_Load(object sender, EventArgs e)
         {
             DirectoryInfo di = new DirectoryInfo(path);
             FileInfo[] files = di.GetFiles();
 
+            documents.Columns.Clear();
+            documents.Items.Clear();
             documents.View = View.Details;
             documents.Sorting = SortOrder.Ascending;
             documents.AllowColumnReorder = true;

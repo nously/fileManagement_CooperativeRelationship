@@ -112,13 +112,14 @@ namespace FileManagement_CoopRel
 
             // save document
             
-            Object savedir = path + "\\"+  +"_tess_";
+            Object savedir = path + "\\"+ relTitleTextBox.Text + "_"+ instantTextBox.Text +"_";
             writer.SaveAs2(ref savedir);
             writer.Close(ref missing, ref missing, ref missing);
             wordApp.Quit(ref missing, ref missing, ref missing);
 
 
             MessageBox.Show("Document saved");
+            parent.DocumentList_Load(sender, e);
         }
 
         private void DocumentCreation_Load(object sender, EventArgs e)
