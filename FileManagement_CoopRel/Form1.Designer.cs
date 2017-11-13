@@ -30,20 +30,20 @@
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.label3 = new System.Windows.Forms.Label();
             this.luarNegeri = new MetroFramework.Controls.MetroTile();
             this.dalamNegeri = new MetroFramework.Controls.MetroTile();
             this.welcomePanel = new MetroFramework.Controls.MetroPanel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.listTahunPanel = new MetroFramework.Controls.MetroPanel();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.daftarTahun = new System.Windows.Forms.FlowLayoutPanel();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.daftarTahunPanelLabel = new MetroFramework.Controls.MetroLabel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.label3 = new System.Windows.Forms.Label();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.welcomePanel.SuspendLayout();
@@ -60,9 +60,9 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(20, 60);
+            this.metroPanel1.Location = new System.Drawing.Point(0, 0);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(178, 445);
+            this.metroPanel1.Size = new System.Drawing.Size(178, 525);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -84,19 +84,6 @@
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(55, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Menu";
             // 
             // luarNegeri
             // 
@@ -165,15 +152,24 @@
             this.listTahunPanel.HorizontalScrollbarBarColor = true;
             this.listTahunPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.listTahunPanel.HorizontalScrollbarSize = 10;
-            this.listTahunPanel.Location = new System.Drawing.Point(198, 60);
+            this.listTahunPanel.Location = new System.Drawing.Point(218, 0);
             this.listTahunPanel.Name = "listTahunPanel";
             this.listTahunPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.listTahunPanel.Size = new System.Drawing.Size(637, 445);
+            this.listTahunPanel.Size = new System.Drawing.Size(637, 525);
             this.listTahunPanel.TabIndex = 1;
             this.listTahunPanel.VerticalScrollbarBarColor = true;
             this.listTahunPanel.VerticalScrollbarHighlightOnWheel = false;
             this.listTahunPanel.VerticalScrollbarSize = 10;
             this.listTahunPanel.Visible = false;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(495, 16);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(95, 32);
+            this.metroButton1.TabIndex = 4;
+            this.metroButton1.Text = "Tambah Tahun";
+            this.metroButton1.UseSelectable = true;
             // 
             // daftarTahun
             // 
@@ -237,14 +233,18 @@
             this.daftarTahunPanelLabel.TabIndex = 2;
             this.daftarTahunPanelLabel.Text = "Daftar Tahun Kerjasama";
             // 
-            // metroButton1
+            // label3
             // 
-            this.metroButton1.Location = new System.Drawing.Point(495, 16);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(95, 32);
-            this.metroButton1.TabIndex = 4;
-            this.metroButton1.Text = "Tambah Tahun";
-            this.metroButton1.UseSelectable = true;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(55, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 25);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Menu";
             // 
             // Form1
             // 
@@ -275,7 +275,6 @@
         private MetroFramework.Controls.MetroTile dalamNegeri;
         private MetroFramework.Controls.MetroTile luarNegeri;
         private MetroFramework.Controls.MetroPanel metroPanel2;
-        private System.Windows.Forms.Label label3;
         private MetroFramework.Controls.MetroPanel listTahunPanel;
         private MetroFramework.Controls.MetroLabel daftarTahunPanelLabel;
         private MetroFramework.Controls.MetroPanel welcomePanel;
@@ -287,6 +286,7 @@
         private MetroFramework.Controls.MetroTile metroTile3;
         private MetroFramework.Controls.MetroTile metroTile4;
         private MetroFramework.Controls.MetroButton metroButton1;
+        private System.Windows.Forms.Label label3;
     }
 }
 
