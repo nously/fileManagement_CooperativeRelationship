@@ -43,6 +43,7 @@
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.daftarTahunPanelLabel = new MetroFramework.Controls.MetroLabel();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.welcomePanel.SuspendLayout();
@@ -157,6 +158,7 @@
             // 
             // listTahunPanel
             // 
+            this.listTahunPanel.Controls.Add(this.metroButton1);
             this.listTahunPanel.Controls.Add(this.daftarTahun);
             this.listTahunPanel.Controls.Add(this.daftarTahunPanelLabel);
             this.listTahunPanel.Dock = System.Windows.Forms.DockStyle.Right;
@@ -235,6 +237,15 @@
             this.daftarTahunPanelLabel.TabIndex = 2;
             this.daftarTahunPanelLabel.Text = "Daftar Tahun Kerjasama";
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(495, 16);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(95, 32);
+            this.metroButton1.TabIndex = 4;
+            this.metroButton1.Text = "Tambah Tahun";
+            this.metroButton1.UseSelectable = true;
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(855, 525);
@@ -275,6 +286,7 @@
         private MetroFramework.Controls.MetroTile metroTile2;
         private MetroFramework.Controls.MetroTile metroTile3;
         private MetroFramework.Controls.MetroTile metroTile4;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
 
